@@ -69,7 +69,6 @@
 </head>
 <body>  
 <div id="container"></div>
-
 <script>
 /**
  * Define the version of the Google Pay API referenced when creating your
@@ -234,10 +233,7 @@ function onGooglePayLoaded() {
 function addGooglePayButton() {
   const paymentsClient = getGooglePaymentsClient();
   const button =
-      paymentsClient.createButton({
-      	onClick: onGooglePaymentButtonClicked,
-        buttonSizeMode: 'fill',
-      });
+      paymentsClient.createButton({onClick: onGooglePaymentButtonClicked});
   document.getElementById('container').appendChild(button);
 }
 
